@@ -46,12 +46,13 @@ footer {
 }
 
 .active {
-  background: #012c7a;
+  background: #4CAF50;
+  /*background: #012c7a;
   background-image: -webkit-linear-gradient(top, #012c7a, #4a81e6);
   background-image: -moz-linear-gradient(top, #012c7a, #4a81e6);
   background-image: -ms-linear-gradient(top, #012c7a, #4a81e6);
   background-image: -o-linear-gradient(top, #012c7a, #4a81e6);
-  background-image: linear-gradient(to bottom, #012c7a, #4a81e6);
+  background-image: linear-gradient(to bottom, #012c7a, #4a81e6);*/
   color: white !important;
 }
 
@@ -70,6 +71,11 @@ header {
   margin-top: 60px;
 }
 
+/* To center text inside legend in microsoft edge */
+legend {
+  margin:0 auto;
+}
+
 .centered-container {
   width: 100%;
   margin-left: auto;
@@ -85,16 +91,18 @@ section {
 .btn {
   display: inline-block;
   min-width: 180px;
+  height: 50px;
   margin-top: 20px;
   margin-bottom: 20px;
-  background: #012c7a;
+  background: #4CAF50;
+  /*background: #012c7a;
   background-image: -webkit-linear-gradient(top, #012c7a, #4a81e6);
   background-image: -moz-linear-gradient(top, #012c7a, #4a81e6);
   background-image: -ms-linear-gradient(top, #012c7a, #4a81e6);
   background-image: -o-linear-gradient(top, #012c7a, #4a81e6);
-  background-image: linear-gradient(to bottom, #012c7a, #4a81e6);
+  background-image: linear-gradient(to bottom, #012c7a, #4a81e6);*/
   border: none;
-  /*border-radius: 4px;*/
+  border-radius: 7px;
   color: #ffffff;
   font-size: 16px;
   padding: 10px 0px 10px 0px;
@@ -174,6 +182,40 @@ section {
   margin-bottom: 40px;
 }
 
+.about-me-content {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.about-me-content p:first-child {
+  margin: 0px;
+  padding: 0px;
+}
+
+.about-me-content p:last-child {
+  margin: 0px;
+  padding: 0px;
+}
+
+ .about-me-content .description {
+  width: 100%;
+  margin-left: 25px;
+  text-align: left;
+ }
+
+.about-me-content img {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+ 
+}
+
 .project {
   width: 100%;
   margin-top: 30px;
@@ -219,7 +261,7 @@ section {
 
 .testimonial {
   width: 90%;
-  margin: 1%;
+  margin: 10px;
   padding: 15px 25px 15px 25px;
   color: #000;
   font-size: 15px;
@@ -227,6 +269,7 @@ section {
   /*border: solid 1px black;*/
   background: white;
   border-radius: 4px;
+  overflow:hidden;
   z-index: 5;
 }
 
@@ -328,6 +371,14 @@ section {
 }
 
 @media only screen and (min-width: 1200px) {
+  .about-me-content .description {
+    width: 70%;
+   }
+
+   .about-me-content img {
+    width: 175px;
+  }
+
   .project .description {
     width: 38%;
     margin: 2%;
@@ -350,7 +401,17 @@ section {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media only screen and (min-width: 1600px) {
+  .about-me-content .description {
+    width: 70%;
+   }
+
+  .about-me-content img {
+    width: 250px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
   .top-nav a:not(:first-child) {
     display: none;
   }
